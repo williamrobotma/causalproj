@@ -1,0 +1,3 @@
+[submodule "CFFair_Emulate"]
+	path = CFFair_Emulate
+	url = https://github.com/williamrobotma/CFFair_Emulate.git
