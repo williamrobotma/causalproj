@@ -1,0 +1,223 @@
+﻿variable name,variable definition,Notes,branching logic dependency (Y/N)
+record_ID,Record ID NCIPR2,,N
+which_NCIPR,which_NCIPR,"(1) NCIPR wave 1 February 23, 2021; (2) NCIPR wave 2 March 31, 2021",N
+complete_binary,complete_binary,(0) incomplete; (1) complete,N
+why_incomplete,why_incomplete,(1) complete; (2) survey administration error; (3) incomplete survey,N
+covid_self_report,participant belief about having had COVID,(0) report no prior illness; (1) confirm prior illness,N
+DOB_age_out_of_range,DOB provided <18 or >100,(0) DOB age 18-100; (1) DOB age <18 or age >100,N
+COVID_date_out_of_range,COVID_date_out_of_range,(0) Feb 2020 - March 2021; (1) date not provided or out of range,N
+quality_check_flag,quality_check_flag,"(0) none; (1) ≥1 implausible response (e.g., 6’20” tall); (2) ≥1 inconsistent response (What is your current age? [db_52] ≠ reported date of birth); (3) inconclusive (e.g., age or DOB response not provided)",N
+data_correction,N = 7 data flag removed; raw data unchanged,(0) no correction; (1) typo in age or height; original data unchanged but [quality_check_flag] changed to '0',N
+excluded_sample,"N = 1,590 Sample used in Demographic Analysis","(0) included (n=1,590); exclusions filtered in the following order: (1) incomplete; (2) survey admin error; (3) [covid_self_report] = '0'; (4) DOB provided out of range; (5) [quality_check_flag] = '1' or '2'; (6) COVID date inconclusive",N
+age_calculated,Participant reported date of birth [db_2] converted to age in years,Participant reported date of birth [db_2] converted to age in years; if older than 89; edited to de-identify,N
+ncipr_date,Today's Date,removed (indirect identifier),N
+ncipr_gender,What is your gender? (mark all that apply),,N
+ncipr_gender_selfdescribe,Option to self-describe:,,Y
+ncipr_infected_covid,Do you believe that you have been personally infected with COVID? This includes presumed positive regardless of whether you had testing done,,N
+ncipr_infected_caught_covid,How do you think you caught COVID?,,Y
+ncipr_infected_inperson_covid,What led to person-to-person contact?,,Y
+ncipr_current_covid_status,Are you currently COVID positive?,,N
+ncipr_test_any,Have you been tested for COVID (antibodies or active illness)?,,Y
+ncipr_test_pos_pcr,Have you had a positive COVID PCR test (throat or nose swab)?,,Y
+ncipr_test_frequency_pcr,Number of times you have had a positive COVID PCR test,,Y
+ncipr_test_pcr_date1,When did you receive your first test?,,Y
+ncipr_test_pcr_locat1,Where did you receive your throat/nose swab COVID test?,,Y
+ncipr_test_pcrlocat_other1,Other:,,Y
+ncipr_test_pcr_symp1,Did you have symptoms when you received your throat/nose swab?,,Y
+ncipr_test_pcr_date2,When did you receive your second test?,,Y
+ncipr_test_pcr_locat2,Where did you receive your throat/nose swab COVID test?,,Y
+ncipr_test_pcrlocat_other2,Other:,,Y
+ncipr_test_pcr_symp2,Did you have symptoms when you received your throat/nose swab?,,Y
+ncipr_test_pcr_date3,When did you receive your third test?,,Y
+ncipr_test_pcr_locat3,Where did you receive your throat/nose swab COVID test?,,Y
+ncipr_test_pcrlocat_other3,Other:,,Y
+ncipr_test_pcr_symp3,Did you have symptoms when you received your throat/nose swab?,,Y
+ncipr_test_antib, Have you had a blood test for COVID antibodies?,,Y
+ncipr_test_antib_pos,Have you tested positive for COVID antibodies?,,Y
+ncipr_test_antib_date, Date of most recent test,changed to Mar-21 format,Y
+ncipr_test_antib_locat,Where did you receive your blood antibody COVID test(s)?,,Y
+ncipr_test_antibiocat_other,Other:,,Y
+ncipr_test_antib_symp,Did you have symptoms when you were tested for antibodies?,,Y
+ncipr_test_reason,Why were you tested?,,Y
+ncipr_test_reason_other,Other,,Y
+ncipr_test_reason_health,Which pre-existing health conditions apply to you?,,Y
+ncipr_test_job_mandatory,Did your employer make testing mandatory?,,Y
+ncipr_test_job_reason,Why was it helpful for your job to be tested?,,Y
+ncipr_testjobreason_other,Please specify other:,,Y
+ncipr_repeat_illness,Were you ill with COVID symptoms more than once?,,Y
+ncipr_pregnant_any,Did you have COVID while you were pregnant?,,Y
+ncipr_pregnant_trimester,Which trimester were you in?,,Y
+ncipr_onset_date,When did you first become ill with COVID?,,Y
+ncipr_illness_length,How long were you ill with COVID-19 (in days),,Y
+ncipr_symptoms_all,What symptoms did you experience while you were ill with COVID? (check all),,Y
+ncipr_fever_level,Was your fever ever greater than  103.0 F/39.4 C?,,Y
+ncipr_symptoms_all_01_days2,How long did you experience Fever?,,Y
+ncipr_symptoms_all_other_d,Please specify other:,,Y
+ncipr_cough_type,Please describe your type of cough,,Y
+ncipr_cough_type_other,Specify other cough:,,Y
+ncipr_symptoms_med_complicat,Which medical complications did you experience?,,Y
+ncipr_max_temp,Maximum temperature recorded (Please be sure to indicate temperature scale i.e. F or C):,,Y
+ncipr_min_osat,"Lowest oxygen saturation recorded (if you don't know, please enter 'N/A')",,Y
+ncipr_symptom_worst,What was the most concerning COVID symptom or medical complication that you experienced?,,Y
+ncipr_symptom_worst_other,Please specify other:,,Y
+ncipr_symptoms_events,Did you experience the following? (check all),,Y
+ncipr_symptom_event_other,Please specify other:,,Y
+ncipr_how_severe_self,How severe was your COVID illness?,,Y
+ncipr_onset_symptoms,What symptoms led you to seek medical attention? (check all),,Y
+ncipr_onset_symptoms_other,Please specify other:,,Y
+ncipr_onset_provider,"When you realized you were sick, where did you initially go for medical assistance?",,Y
+ncipr_onset_provider_other,Please specify Other:,,Y
+ncipr_onset_call_911,Did you ever call 911 with concerns about your COVID illness?,,Y
+ncipr_calls_911,How many times?,,Y
+ncipr_employ,What was your employment status at the time that you developed COVID illness?,,Y
+ncipr_employ_time_off,Did you take time off of work as a result of your COVID illness?,,Y
+ncipr_employ_time_off_days,How many days taken off work?,,Y
+ncipr_employ_income_loss,Did you lose income when you were not able to work?,,Y
+ncipr_treat_home,Which of the following at home treatments did you use? (check all),,Y
+ncipr_treat_home_other,Please specify other:,,Y
+ncipr_treat_hospital,Were you admitted to the hospital as a result of your COVID illness?,,Y
+ncipr_treat_hospital_days,How long were you hospitalized (days)?,,Y
+ncipr_treat_med_therapy,Which medical treatments did you receive? (check all),,Y
+ncipr_treat_med_therapy_01,For how many days: Transfer into a prone position (lying face down on your stomach) for extended periods of time,,Y
+ncipr_treat_med_therapy_02,For how many days: Admission to ICU or High Dependency Unit,,Y
+ncipr_treat_med_therapy_03,For how many days: Oxygen Therapy,,Y
+ncipr_treat_med_therapy_04,For how many days: Non-invasive Ventilation (such as continuous positive airway pressure/CPAP/BiPAP),,Y
+ncipr_treat_med_therapy_05,"For how many days: Invasive ventilation (Tracheostomy, Intubation)",,Y
+ncipr_treat_med_therapy_06,For how many days: Prolonged cardiac and respiratory support (Extracorporeal support),,Y
+ncipr_treat_med_therapy_07,For how many days: IV fluids,,Y
+ncipr_treat_med_therapy_08,How many times: Convalescent plasma (blood plasma taken from people who have recovered from COVID-19 and may have antibodies),,Y
+ncipr_treat_med_therapy_09,How many times: Renal replacement therapy (RRT) or dialysis?,,Y
+ncipr_treat_med_therapy_10,How many times: Chest X-ray,,Y
+ncipr_treat_med_therapy_11,"How many times: Other kind of imaging such as Ultrasound, MRI, CT-Scan",,Y
+ncipr_treat_med_therapy_other,Please specify other:,,Y
+ncipr_treat_med_therapy_other_times,How many times: Other,,Y
+ncipr_treat_med_therapy_10_infil,Were infiltrates present? (Chest X-Ray),,Y
+ncipr_treat_prescriptions,Which medications have you been prescribed to treat your COVID-related illness? (check all) ,,Y
+ncipr_treat_prescriptions_01_days,How many days did you take: Hydroxychloroquine (Plaquenil),,Y
+ncipr_treat_prescriptions_02_days,How many days did you take: Antibiotic (such as Azithromycin),,Y
+ncipr_treat_prescriptions_03_days,How many days did you take: Remdesivir or other anti-viral,,Y
+ncipr_treat_prescriptions_04_days,"How many days did you take: Immunosuppressive medication (such as Tocilizumab, Azathioprine)",,Y
+ncipr_treat_prescriptions_05_days,"How many days did you take: Anti-inflammatory corticosteroid (such as Dexamethesone, Prednisone, Hydrocortisone, Interferon beta-1a)",,Y
+ncipr_treat_prescriptions_06_days,How many days did you take: Cardiovascular drug (such as Inotropes/vasopressors),,Y
+ncipr_treat_prescriptions_07_days,How many days did you take: Antifungal,,Y
+ncipr_treat_prescriptions_other,Please specify other:,,Y
+ncipr_treat_prescriptions_other_days,How many days did you take: Other,,Y
+ncipr_lasting_changes,Some people report lasting changes in their general health after they have fully recovered from COVID sickness. Did you experience any of the following general health changes as a possible result of your experience of having had COVID? (check all) ,,Y
+ncipr_lasting_changes_other,Please specify other:,,Y
+ncipr_lasting_current,"Have those lasting symptoms or complications resolved, or are they still ongoing?",,Y
+ncipr_lasting_cognitive,Have you experienced any cognitive or memory problems as a result of your COVID illness?,,Y
+ncipr_return_health_when,When do you expect to be fully recovered from your COVID illness and back to full health?,,Y
+ncipr_lasting_mood,What kind of lingering mood symptoms did you experience as a result of your COVID illness? (check one),,Y
+ncipr_how_anxious_other,Please specify:,,Y
+ncipr_lasting_cognitive_detail,What kind of cognitive or memory problems did you experience as a result of your COVID illness? (check all),,Y
+ncipr_lasting_cognitive_other,Please specify:,,Y
+ncipr_lasting_changes_time,How long did you experience lasting changes in your general health after fully recovering from COVID sickness?,,Y
+ncipr_how_anxious,How much anxiety did you have about being ill with the COVID virus?,,Y
+ncipr_why_anxious,What was your greatest source of anxiety?,,Y
+ncipr_how_disrupted,How much did your COVID illness disrupt your life?,,Y
+ncipr_quarantine_kind_test,Which best describes your quarantine behavior when you were ill with COVID? ,,Y
+ncipr_med_care_rate,Were you satisfied with the medical care you received from medical professionals throughout your COVID illness?,,Y
+ncipr_other_household_covid,Did any other individuals that live full-time in your household become ill with COVID? ,,Y
+ten_days_activity_01,"In the last 10 days, have you...",,N
+ncipr_pet,Do you have pets in your home? (check all) ,,N
+ncipr_pet_01_num,Number of: Dog(s),,Y
+ncipr_pet_02_num,Number of: Cat(s),,Y
+ncipr_pet_03_num,Number of: Bird(s),,Y
+ncipr_pet_04_num,Number of: Reptiles(s),,Y
+ncipr_pet_05_num,Number of: Rodents,,Y
+ncipr_pet_06_num,Number of: Fish,,Y
+ncipr_pet_other,Please specify other:,,Y
+ncipr_pet_07_num,Number of: Other,,Y
+ncipr_vaccine_received,At this time have you received a COVID-19 vaccine?,,N
+ncipr_vaccine_received_date,When did you receive the COVID-19 vaccine?,,Y
+ncipr_which_vaccine,Which vaccine did you receive (choose one)?,,Y
+ncipr_which_vaccine_other,Which other vaccine did you receive?,,Y
+ncipr_vaccine_had_side,Did you experience any side effects within 2 weeks after the FIRST vaccine?,,Y
+ncipr_vaccine_side_effects,Which side effect did you experience (check all that apply),,Y
+ncipr_vaccine_side_effects_other,Describe other:,,Y
+ncipr_vaccine2_had_side,Did you experience any side effects within 2 weeks after the SECOND vaccine?,,Y
+ncipr_vaccine2_side_effects,Which side effects did you experience within 2 weeks after the SECOND vaccine (check all that apply),,Y
+ncipr_vaccine2_side_effects_other,Other (please describe):,,Y
+ncipr_vaccine_relaxed_behavior,"Have you relaxed your COVID-19 safety behaviors (e.g., social distancing, mask wearing, travel) now that you have received the COVID-19 vaccine?",,Y
+ncipr_if_offered_vaccine,"If you were offered the COVID vaccine tomorrow, what would you do?",,Y
+ncipr_vaccine_will_relax_behavior,"Do you think that you will relax your COVID-19 safety behaviors (e.g., social distancing, mask wearing, travel) once you receive the COVID-19 vaccine?",,Y
+ncipr_has_children,"Do you have children? (indicate YES if pregnant now, if partner of pregnant female, or if trying to conceive)",,N
+ages_of_children,What are the ages of your children? (check all that apply),removed (indirect identifier),Y
+ncipr_breastfeeding_infant,Are you currently breastfeeding an infant?,removed (indirect identifier),Y
+ncipr_breastfeeding_baby_side_effects,Did your breastfeeding baby experience any side effects following your vaccination?,removed (indirect identifier),Y
+ncipr_infant_side_effects, Which side effect did your infant experience? (check all that apply),removed (indirect identifier),Y
+ncipr_infant_side_effect_other,Describe other:,removed (indirect identifier),Y
+ncipr_covid_vaccine_plans,Which of the following applies to your plans about the COVID vaccine? (check one),,Y
+ncipr_children_infected,Has your child (or children) been infected with COVID?,,Y
+ncipr_children_infected_ages,Ages of children infected with COVID: ,,Y
+ncipr_vaccine_children,Which of the following applies to your plans about the COVID vaccine for your child(ren)?,,Y
+novel_coronavirus_covid_illness_patient_report_nci_complete,Complete?,,N
+db_1, What is the highest level of education that you have completed?,removed (indirect identifier),N
+db_2,What is your date of birth?,removed (indirect identifier),N
+db_height_feet,Feet:,,N
+db_height_inches,Inches:,,N
+db_3,How would you describe your ethnicity?,removed (indirect identifier),N
+db_4,What is your RACE/ETHNICITY? Please select all that apply. Please select other if you do not identify with any of these,removed (indirect identifier),N
+db_4_others,"If other, please describe here:",removed (indirect identifier),Y
+db_5,Which best describes you? Are you...,,N
+db_5_other,"If other, please list:",,Y
+db_6_children,Number of Children:,removed (indirect identifier),N
+db_6_adults,Number of adults:,removed (indirect identifier),N
+db_7,How many bedrooms are in your home?,removed (indirect identifier),N
+db_8,Do you feel you have stable housing?,,N
+db_9,"During the LAST year, what was the total income of your household from all sources before taxes and other deductions? You best guess is fine. (NOTE: This is confidential information and your name is not connected to this data.)",removed (indirect identifier),N
+db_10,How many household members are supported by your combined family income (including yourself)?,removed (indirect identifier),N
+db_11,How many of these people are children? Please include anyone under 18 years ,removed (indirect identifier),N
+db_12,How has your combined family income changed compared to your combined family income before COVID-19?,,N
+db_12_1,Was your change in family income pandemic related?,,Y
+db_13,What type of employment do you have? (Please check all that apply),,N
+db_13_other,"If other, please specify",,Y
+db_14,"If you identify as having a partner or spouse, what type of employment does your partner have? (Please check all that apply)",,N
+db_14_other,"If other, please specify",,Y
+db_15,Do you receive public assistance or other services through government or other local agencies? (check all that apply),removed (indirect identifier),N
+db_15_other,"If other, please specify",,Y
+db_16,How is your health care currently paid? (check all that apply],,N
+db_16_other,"If other, please specify",,Y
+db_17,Have you received medical care (any kind) at an NYU Langone location?,removed (indirect identifier),N
+db_18,"Overall, how satisfied are you with your financial situation? ",,N
+db_19,How often do you worry about financial matters?,,N
+db_20,Do you generally know how much money you'll have to live on from one month to the next?,,N
+db_ladder,"On a scale from one to ten, where do you think you fall, relative to other people in the Untied States?",,N
+db_21,"In your day-to-day life, have you experienced discrimination?",,N
+db_22,What do you think was the reason(s) for this/these experience(s)? Pick as many as apply,,N
+db_22_other,Please specify other:,,Y
+db_23,"Over your entire lifetime, how stressful have experiences of unfair treatment or discrimination usually been for you?",,N
+db_24,How has the COVID-19 outbreak changed your stress levels or mental health?,,N
+db_25,How has the COVID-19 outbreak changed your sleep?,,N
+db_26,How has the COVID-19 outbreak changed your daily energy levels?,,N
+db_27,How has the COVID-19 outbreak changed your social network support?,,N
+db_28,"Regarding your partnership/marriage, how has the COVID-19 outbreak changed your relationship satisfaction?",,Y
+db_29,"Regarding your partnership/marriage, how has the COVID-19 outbreak changed your relationship commitment?",,Y
+db_30,"Regarding your partnership/marriage, how has the COVID-19 outbreak changed your relationship passion?",,Y
+db_31,Please rate your current stress level. ,,N
+db_32,What are you doing to cope with your stress related to the COVID-19 outbreak? (check all that apply),,N
+db_32_other,"If other, please list:",,Y
+db_33,How long do you think it will be before things 'go back to normal'? ,,N
+db_blood_type_know,Do you know your blood type?,,N
+db_blood_type,"What is your blood type? (O, A, B, AB) (Add + or - if known)",,Y
+db_36,Do you have history of any of the following medical conditions? (check all that apply),,N
+db_36_other,Describe other:,,Y
+db_tonsils,Have you had your tonsils removed?,,N
+db_37,At any time in your past have you received treatment for any of the following? (check all that apply),,N
+db_38,Meditate or use mindfulness strategies for more than 5 minutes?,,N
+db_39,Wake up feeling like you got a good night of sleep?,,N
+db_40,Talk to friends or family on the phone more than 30 minutes?,,N
+db_41,Engage in a religious service or practice?,,N
+db_42,"Engage in physical activity for more than 30 minutes (such as walking, hiking, climbing stairs, yoga, running, weight lifting, push-ups, sit-ups)?",,N
+db_43,Drink one or more drinks of an alcoholic beverage?,,N
+db_44,Use marijuana or hashish?,,N
+db_45,Use recreational or illegal drugs (not including marijuana)?,,N
+db_46,"Use nicotine products (including cigarettes, e-cigarettes, cigars, vaping, chew, dip or JUUL)?",,N
+db_47,"Watch TV/movies on any kind of screen for more than 3 hours (including TV and game shows, movies, sale channels like QVC, YouTube videos, documentaries)?",,N
+db_48,"Use social media (such as Instagram, Facebook, Twitter, Snapchat, Pinterest, Viber, YouTube, LinkedIn, Tumblr, QZone)?",,N
+db_49,Do you personally know children ages 0-5 that were infected with COVID?,,N
+db_50,Do you personally know children ages 6-10 that were infected with covid?,,N
+db_51,Do you personally know women that were infected with COVID during pregnancy?,,N
+db_52,What is your current age?,if older than 89; edited to de-identify,N
+db_53,How interested are you in participating in future (paid) COVID studies?,,N
+demographics_baseline_complete,Complete?,,N
