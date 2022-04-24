@@ -1,0 +1,9 @@
+name: cf
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - scikit-learn
+  - statsmodels
+  - pystan
+  - numpy
