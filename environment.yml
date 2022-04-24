@@ -7,3 +7,4 @@ dependencies:
   - statsmodels
   - pystan
   - numpy
+prefix: /home/wma/miniconda3/envs/cf

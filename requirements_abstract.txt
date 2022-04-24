@@ -1,0 +1,4 @@
+pandas
+pystan<3.0
+scikit-learn
+scipy
