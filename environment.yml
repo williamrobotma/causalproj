@@ -1,0 +1,10 @@
+name: cf
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - scikit-learn
+  - statsmodels
+  - pystan
+  - numpy
+prefix: /home/wma/miniconda3/envs/cf
