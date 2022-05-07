@@ -78,7 +78,7 @@ data {
   matrix[N, Kp]   p; // sensitive variables
   matrix[N, Ks]   s; // sensitive variables
   matrix[N, Kt]   t; // sensitive variables
-  matrix[N, Ko]   t; // sensitive variables
+  matrix[N, Kogit statut]   t; // sensitive variables
 
   real           Y[N]; // UGPA
   real           o[N];
